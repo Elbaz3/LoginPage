@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Login Page</title>
+            <link rel="stylesheet" href="CSS/output.css">
+            <link rel="icon" href="assets/login.png">
+      </head>
+      <body class="bg-slate-800 h-lvh flex items-center justify-center relative">
+            <section id="sign-up" class="sign-up bg-slate-900 w-[90%] h-[80%] rounded-xl p-5 flex
+            gap-5 shadow-sm shadow-blue-500 md:shadow-none">
+                  <figure class="h-full rounded-xl w-[50%] overflow-hidden shadow-sm 
+                  shadow-blue-500/50 hidden md:block ">
+                        <img src="assets/sign-up.jpg" alt="road" class="h-full max-w-full
+                        object-cover ">
+                  </figure>
+                  <div class="form-container flex flex-col p-6 text-amber-50 h-full w-full md:w-[50%] pt-[50px]">
+                        <h1 class=" text-3xl sm:text-4xl text-center text-amber-50">Create an account</h1>
+                        <form id="sign-up" action="" method="post" class="h-fit w-full flex flex-col gap-5
+                        py-[30px] sm:p-[40px]  ">
+                              <div class="name flex gap-5 max-w-full">
+                                    <input type="text" placeholder="First name" data-name="fname" class="inp fname" >
+                                    <input type="text" placeholder="Last name" data-name="lname" class="inp lname" >
+                              </div>
+                              <div class="user-name-container">
+                                    <input type="text" placeholder="Username" data-name="username" class="inp userName" >
+                              </div>
+                              <div class="email-container">
+                                    <input type="email" placeholder="Enter Your Email" data-name="email" class="inp email" >
+                              </div>
+                              <div class="pass-container">
+                                    <input type="password" placeholder="Enter Your Password" data-name="password" class="inp pass" >
+                              </div>
+                              <div class="terms flex px-0 ">
+                                    <input type="checkbox" name="" id="terms" class="cursor-pointer w-4">
+                                    <label for=""
+                                    class="ml-[10px] text-[12px] text-zinc-500"
+                                    >I agree to the <a href="#" class="text-sky-500">Terms & Conditions</a></label>
+                              </div>
+                              <button id="subUp" type="submit" class="btn bg-sky-800 w-full py-2.5 rounded-lg cursor-pointer
+                              text-sm">Create account</button>
+                        </form>
+                        <p class="text-[12px] text-zinc-500 pl-[40px]">Already have an account <a id="log-in" href="#" class="text-sky-500">Log in</a></p>
+                  </div>
+            </section>
+            <section id="log-section" class="log-in bg-slate-900 w-[90%] h-[80%] rounded-xl p-5 flex 
+            gap-5 absolute hidden shadow-sm shadow-blue-500 md:shadow-none">
+                  <div class="form-container flex flex-col p-6 text-amber-50 h-full w-full md:w-[50%] pt-[50px]">
+                        <h1 class="text-4xl text-center text-amber-50">Log In</h1>
+                        <form id="log-form" action="" method="post" class="h-fit w-full flex flex-col gap-5
+                        py-[30px] sm:p-[40px]  ">
+                              <div class="email">
+                                    <input type="email" placeholder="Enter Your Email" class="inp log-email" >
+                              </div>
+                              <div class="pass">
+                                    <input type="password" placeholder="Enter Your Password" class="inp log-pass" >
+                              </div>
+                              <div class="terms flex px-0 ">
+                                    <input type="checkbox" name="" id="" class="cursor-pointer w-4">
+                                    <label for=""
+                                    class="ml-[10px] text-[12px] text-sky-500"
+                                    >remember me</label>
+                              </div>
+                              <button id="subIn" type="submit" class="bg-sky-800 w-full py-2.5 rounded-lg cursor-pointer
+                              text-sm">Log In</button>
+                        </form>
+                        <p class="text-[12px] text-zinc-500 pl-[40px]">I am new <a id="signUp" href="#" class="text-sky-500">Sign Up</a></p>
+
+                  </div>
+                  <figure class="h-full rounded-xl w-[50%] overflow-hidden shadow-sm 
+                  shadow-blue-500/50 hidden md:block">
+                        <img src="assets/log-in.jpg" alt="road" class="h-full max-w-full
+                        object-cover ">
+                  </figure>
+            </section>
+            <script src="main.js"></script>
+      </body>
+</html>
