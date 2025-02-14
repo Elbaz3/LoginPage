@@ -698,6 +698,12 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .my-\[4\%\] {
+    margin-block: 4%;
+  }
+  .my-\[6\%\] {
+    margin-block: 6%;
+  }
   .mt-7 {
     margin-top: calc(var(--spacing) * 7);
   }
@@ -1708,6 +1714,12 @@
   .py-2\.5 {
     padding-block: calc(var(--spacing) * 2.5);
   }
+  .py-\[2\%\] {
+    padding-block: 2%;
+  }
+  .py-\[4\%\] {
+    padding-block: 4%;
+  }
   .py-\[10\%\] {
     padding-block: 10%;
   }
@@ -2336,9 +2348,19 @@
   .transform-view {
     transform-box: view-box;
   }
+  .sm\:my-\[4\%\] {
+    @media (width >= 40rem) {
+      margin-block: 4%;
+    }
+  }
   .sm\:p-\[40px\] {
     @media (width >= 40rem) {
       padding: 40px;
+    }
+  }
+  .sm\:py-\[4\%\] {
+    @media (width >= 40rem) {
+      padding-block: 4%;
     }
   }
   .sm\:text-4xl {
