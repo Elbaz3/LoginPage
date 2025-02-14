@@ -54,7 +54,7 @@ function checkUser (email, username) {        // function to check if the user n
       let users = localStorage.getItem('users')
       let listUsers = JSON.parse(users) || []
       let user = listUsers.find((user) => user.email === email || user.username === username ) || {}
-      if (!listUsers.length  || !user.length) {
+      if (!listUsers.length  || !user.email) {
             return {
                   available: true,
                   message: 'user is available'
