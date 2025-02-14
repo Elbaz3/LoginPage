@@ -141,7 +141,7 @@ signUpForm ? signUpForm.addEventListener('submit', (e) => {
             sessionStorage.clear()
             sessionStorage.setItem('user', JSON.stringify(userInfo))
             alert("register successful!")
-            window.location.pathname = '/LoginPage/profile.html'
+            window.location.pathname = '/profile.html'
             
       }else {
             alert(userNotExist.message)
@@ -203,7 +203,7 @@ logInForm ? logInForm.addEventListener('submit', (e) => {
 
       if (verification.correct) {
             sessionStorage.setItem('user', JSON.stringify(verification.element))
-            window.location.pathname = "/LoginPage/profile.html"
+            window.location.pathname = "/profile.html"
 
       } else {
             alert(verification.message)
@@ -214,7 +214,7 @@ logInForm ? logInForm.addEventListener('submit', (e) => {
 }) : null
 
 document.addEventListener("DOMContentLoaded", () => {
-      if (window.location.pathname === "/LoginPage/profile.html") {
+      if (window.location.pathname === "/profile.html") {
           let profileName = document.querySelector("#profile .name");
           let profileUserName = document.querySelector("#profile .username");
           let profileEmail = document.querySelector("#profile .email");
@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
             logOut.addEventListener("click", (e) => {
                   e.preventDefault()
                   sessionStorage.clear()
-                  window.location.pathname = '/LoginPage/index.html'
+                  window.location.pathname = '/index.html'
             });
             }
           if (profileName && profileUserName && profileEmail) {
