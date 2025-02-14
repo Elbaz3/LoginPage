@@ -52,8 +52,8 @@ function setLocalStorage() {        // function to set a new user in local stora
 
 function checkUser (email, username) {        // function to check if the user not exist
       let users = localStorage.getItem('users')
-      let listUsers = JSON.parse(users)
-      let user = listUsers.find((user) => user.email === email || user.username === username ? user : null)
+      let listUsers = JSON.parse(users) || []
+      let user = listUsers.find((user) => user.email === email || user.username === username ) || {}
       if (!listUsers || !user) {
             return {
                   available: true,
@@ -76,31 +76,6 @@ function checkUser (email, username) {        // function to check if the user n
       }
       
       
-
-      // if (listUsers) {
-      //       for (let user of listUsers) {
-      //             if (user.email === email) {
-      //                   return {
-      //                         available: false,
-      //                         message: 'email already exists'
-      //                   }
-      //             } else if (user.username === username) {
-      //                   return {
-      //                         available: false,
-      //                         message: 'username already exists'
-      //                   }
-      //             }
-      //       }
-      //       return {
-      //             available: true,
-      //             message: 'new information'
-      //       }
-      // } else {
-      //       return {
-      //             available: true,
-      //             message: 'first user'
-      //       }
-      // }
 }
 
 function resetInputs() {    // function to reset fileds
@@ -197,8 +172,8 @@ linkToSignUp.addEventListener('click', (e) => {
 
 function checkLogIn(email, password) {
       let users = localStorage.getItem('users')
-      let listUsers = JSON.parse(users)
-      let user = listUsers.find((user) => user.email === email)
+      let listUsers = JSON.parse(users) || []
+      let user = listUsers.find((user) => user.email === email) || {}
 
       if (!user) {
             return {
